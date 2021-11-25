@@ -1,0 +1,12 @@
+
+body{
+ 
+  /* background: radial-gradient(circle at 78.93% 8.68%, #ffd9ca 0, #ffdac6 7.14%, #ffdbc2 14.29%, #ffddbf 21.43%, #ffdfbc 28.57%, #ffe0ba 35.71%, #ffe2b8 42.86%, #fde4b7 50%, #f8e6b7 57.14%, #f2e8b7 64.29%, #ece9b8 71.43%, #e6ebba 78.57%, #dfedbd 85.71%, #d9eec0 92.86%, #d3f0c3 100%);
+   */
+   background: radial-gradient(circle at 83.34% 10.27%, #fffff8 0%, #ffffed 10%, #fff9e1 20%, #fff0d5 30%, #ffe6c7 40%,
+    #ffdaba 50%, #fdceae 60%, #fcc3a5 70%, #fcb89e 80%, #fbae9a 90%, #faa498 100%);
+}
+.contenedor{
+  text-align: center;
+}
+

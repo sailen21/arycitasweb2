@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/imagenes/icono.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+    name="description"
+    content="Ary Flores: Distribuidora de la marca de ropa SHEIN"/>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="author" content="Oswaldo Flores Morales" />
+    <meta name="robots" content="index, follow" />
+    <meta name="lang" content="es-ES" />
+    <meta name="keywords" content="SHEIN, ropa, moda, barata, Estilo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"></script>
+    <title>Citas: Ary Flores</title>
+  </head>
+  <body>
+    <!-- <script>
+        var socket = io('https://ary-flores-citas.herokuapp.com/',{ transports: ['websocket'] });
+        /* var socket = io('https://ary-flores-citas.herokuapp.com/',{ transports: ['websocket'] }); */
+        
+        setInterval(function(){
+          socket.emit('client/random', Math.random())
+        }, 2000)
+        //recibiendo un numero random cada dos segundos
+        socket.on('server/random', function(num){
+          console.log(num)
+        })
+      </script> -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  </html>
