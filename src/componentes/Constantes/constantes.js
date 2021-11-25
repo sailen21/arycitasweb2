@@ -374,7 +374,7 @@ export const columnas0 = [
 ];
 export const columnas1 = [
     { field: "nombre", headerName: "Nombre", width: 250, hide: false },
-     { field: 'lugar', headerName: 'Lugar', width: 250, editable: false },
+     /* { field: 'lugar', headerName: 'Lugar', width: 250, editable: false }, */
     { field: 'personaConQuienEnvia', headerName: 'Persona con quien envia', width: 250, editable: false },
     { field: 'lugar', headerName: 'Destino', width: 250, editable: false },
     { field: 'lugarEnviar', headerName: 'Destino', width: 250, editable: false },
