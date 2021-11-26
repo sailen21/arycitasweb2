@@ -32,9 +32,9 @@ export function calcularEntrega(){
     var nombreDia = dias[numeroDia+1];
     var fechaAux = fechaActual;
     var fechaAuxFormateada;
-    if(nombreDia !== "Miércoles"){
-        while (nombreDia !== "Miércoles") {
-            fechaAux = moment(fechaAux).add(1,'days');
+    if(nombreDia !== "Viernes"){
+        while (nombreDia !== "Viernes") {
+            fechaAux = moment(fechaAux).add(2,'days');
             fechaAuxFormateada = moment(fechaAux).format('YYYY-MM-DD')
             numeroDia = new Date(fechaAuxFormateada).getDay();
             nombreDia = dias[numeroDia+1];
