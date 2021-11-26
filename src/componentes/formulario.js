@@ -149,7 +149,7 @@ export default function Formulario() {
                         <Grid container spacing={2}>
                             <ElementoTextField2 // Nombre de usuaurio en facebook
                                 name={"nombre"}
-                                label={"Nombre de tu usuario en Facebook"}
+                                label={"Nombre de tu usuario de Facebook"}
                                 evento={handleChange}
                                 sizeGrid={12}
                                 tipo={"text"}
