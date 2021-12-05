@@ -36,6 +36,8 @@ export default function TablaCitas() {
     const fechaSiguiente = fechaNumero()
     var fechaAnterior = moment(fechaSiguiente).add(-7, 'days');
     fechaAnterior = moment(fechaAnterior).format('YYYY-MM-DD')
+    /* const fechaAnterior = "2021/11/24";
+    var fechaSiguiente = "2021/12/03"; */
     const res = await axios.get(`${baseUrl2}`, {
       params: {
         fechaAnterior: fechaAnterior,
