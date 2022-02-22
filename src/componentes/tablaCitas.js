@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { fechaNumero } from './Funciones';
 import moment from 'moment';
+import dayjs from "dayjs";
 import axios from 'axios';
 import { baseUrl2, columnas0, columnas1, columnas2, personaEnvio } from './Constantes/constantes';
 import { Button, ButtonGroup, Container } from '@material-ui/core';
@@ -34,8 +35,8 @@ export default function TablaCitas() {
 
   const obtenerDatos = async (tipoEntrega = 0) => {
     const fechaSiguiente = fechaNumero()
-    var fechaAnterior = moment(fechaSiguiente).add(-7, 'days');
-    fechaAnterior = moment(fechaAnterior).format('YYYY-MM-DD')
+    var fechaAnterior = dayjs(fechaSiguiente).add(-7, 'day');
+    fechaAnterior = dayjs(fechaAnterior).format('YYYY-MM-DD')
     /* const fechaAnterior = "2021/11/24";
     var fechaSiguiente = "2021/12/03"; */
     const res = await axios.get(`${baseUrl2}`, {
