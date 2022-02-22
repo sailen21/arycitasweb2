@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { fechaNumero } from './Funciones';
-import moment from 'moment';
 import dayjs from "dayjs";
 import axios from 'axios';
 import { baseUrl2, columnas0, columnas1, columnas2, personaEnvio } from './Constantes/constantes';

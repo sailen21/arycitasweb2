@@ -11,8 +11,8 @@ import ElementoTextField from './ElementosFormulario/textField';
 import ElementoSelect from './ElementosFormulario/select';
 import ElementoButton from './ElementosFormulario/button';
 import ElementoTextField2 from './ElementosFormulario/textField2';
-import Alert from '@mui/material/Alert';
-import CheckIcon from '@mui/icons-material/Check';
+/*import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';*/
 /* import Alert from '@mui/material/Alert'; */
 /* import Stack from '@mui/material/Stack';
 import { useForm } from 'react-hook-form'; */

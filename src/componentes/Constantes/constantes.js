@@ -352,7 +352,7 @@ export const formaPago = [
 
 export const lugaresDomicilio = [
     {
-        "municipio": ["Jiutepec costo $35", "Cuernavaca costo $35", "Emiliano Zapata costo $35", "Temixco costo $35"]
+        "municipio": ["Jiutepec costo $35", "Cuernavaca costo $35", "Emiliano Zapata costo $35"]
     }
 ]
 export const baseUrl = "http://ary-flores-citas.herokuapp.com/api/citas/";

@@ -1,4 +1,4 @@
-var moment = require('moment');
+var dayjs = require('dayjs');
 const dias = [
     'Domingo',
     'Lunes',
@@ -24,7 +24,7 @@ const meses = [
     'Noviembre',
     'Diciembre'
   ];
-export function calcularEntrega(){
+export function calcularEntrega(diaEntrega){
     
     var dateNow = new Date(); 
     var fechaActual = arreglarFecha(dateNow);
@@ -34,14 +34,14 @@ export function calcularEntrega(){
     var fechaAuxFormateada;
     if(nombreDia !== "Miércoles"){
         while (nombreDia !== "Miércoles") {
-            fechaAux = moment(fechaAux).add(1,'days');
-            fechaAuxFormateada = moment(fechaAux).format('YYYY-MM-DD')
+            fechaAux = dayjs(fechaAux).add(1,'days');
+            fechaAuxFormateada = dayjs(fechaAux).format('YYYY-MM-DD')
             numeroDia = new Date(fechaAuxFormateada).getDay();
             nombreDia = dias[numeroDia+1];
         }
-        fechaActual = moment(fechaAuxFormateada).format('YYYY-MM-DD')
+        fechaActual = dayjs(fechaAuxFormateada).format('YYYY-MM-DD')
     }else{
-        fechaActual = moment(fechaActual).format('YYYY-MM-DD')
+        fechaActual = dayjs(fechaActual).format('YYYY-MM-DD')
     }
    
     var fechaCadena = darFormatoFecha(new Date(fechaActual))
@@ -59,14 +59,14 @@ export function fechaNumero(){
     var fechaAuxFormateada
     if(nombreDia !== "Miércoles"){
         while (nombreDia !== "Miércoles") {
-            fechaAux = moment(fechaAux).add(1,'days');
-            fechaAuxFormateada = moment(fechaAux).format('YYYY-MM-DD')
+            fechaAux = dayjs(fechaAux).add(1,'days');
+            fechaAuxFormateada = dayjs(fechaAux).format('YYYY-MM-DD')
             numeroDia = new Date(fechaAuxFormateada).getDay();
             nombreDia = dias[numeroDia+1];
         }
-        fechaActual = moment(fechaAuxFormateada).format('YYYY-MM-DD')
+        fechaActual = dayjs(fechaAuxFormateada).format('YYYY-MM-DD')
     }else{
-        fechaActual = moment(fechaActual).format('YYYY-MM-DD')
+        fechaActual = dayjs(fechaActual).format('YYYY-MM-DD')
     }
     
     return  fechaActual 
