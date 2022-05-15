@@ -24,7 +24,7 @@ const meses = [
     'Noviembre',
     'Diciembre'
   ];
-export function calcularEntrega(diaEntrega){
+export function calcularEntrega(diaEntrega){ // dia de entrega recibira si es viernes o miercoles depediendo el tipo de entrega
     
     var dateNow = new Date(); 
     var fechaActual = arreglarFecha(dateNow);

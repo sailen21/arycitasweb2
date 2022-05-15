@@ -1,34 +1,24 @@
-import React from 'react';
 import './App.css';
 import Formulario from "./componentes/formulario";
 import Lugares from './componentes/lugares';
-
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import TablaCitas from './componentes/tablaCitas';
-function App() {
-  return (
-    <Router >
-      <div className="App">
-        <Switch>
-          <Route path="/formulario">
-            <Formulario></Formulario>
-          </Route>
-      
-          <Route path="/citas">
-              <TablaCitas></TablaCitas>
-          </Route>
-          <Route path="/lugares">
-            
-              <Lugares></Lugares>
-          </Route>
-          <Route path="/">
-            <Formulario></Formulario>
-          </Route>
 
-        </Switch>
-      </div>
-    </Router>
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Formulario />}></Route>
+        <Route path='lugares' element={<Lugares />}></Route>
+        <Route path='citas' element={<TablaCitas />}></Route>
+        <Route path="*" element={<Navigate replace to="/" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Grid, Container, CssBaseline, Avatar, ThemeProvider, Modal } from '@material-ui/core';
+import { Grid, Container, Avatar, ThemeProvider, Modal } from '@material-ui/core';
 import axios from 'axios';
 import { mostrarAlerta, calcularEntrega, fechaRegistro } from './Funciones';
 import theme from './Estilos/theme';
 import useStyles from './Estilos/styles';
-import { useHistory } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import { lugares, baseUrl, personaEnvio, formaPago } from './Constantes/constantes'
 import FormularioDireccion from './fomularioDireccion';
 import ElementoTextField from './ElementosFormulario/textField';
@@ -19,7 +19,7 @@ import { useForm } from 'react-hook-form'; */
 
 export default function Formulario() {
     const classes = useStyles();
-    const history = useHistory();
+    const navigate = useNavigate ();
     const [fechaRegis] = useState(fechaRegistro());
 
     const [fechaEntrega] = useState(calcularEntrega);
@@ -91,7 +91,7 @@ export default function Formulario() {
     function handleSubmit(event) {
         cambiarTipoEntrega();
         registrarDatos();
-        mostrarAlerta(history);
+        mostrarAlerta(navigate);
         event.target.reset();
         event.preventDefault();
     }
@@ -140,9 +140,10 @@ export default function Formulario() {
         }
     }
     return (
+       
         <Container component="main" maxWidth="xs" className={classes.container}>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
+               {/*  <CssBaseline /> */}
                 <div className={classes.paper}>
                     <Avatar alt="Ary" src="../imagenes/avatar.jfif" className={classes.large} />
                     <form className={classes.form} onSubmit={handleSubmit} id="formu">
@@ -295,5 +296,7 @@ export default function Formulario() {
                 </Modal>
             </ThemeProvider>
         </Container>
+        
     );
+    
 }

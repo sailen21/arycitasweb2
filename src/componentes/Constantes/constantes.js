@@ -1,8 +1,8 @@
 export const lugares = [
-    {
+  /*   {
         'lugar': "Chedraui Jacarandas",
         'horas': ["14:40 a 14:55"]
-    },
+    }, */
     {
         'lugar': "Centro Cuernavaca plazuela ",
         'horas': ["15:30 a 16:00"]
