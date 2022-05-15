@@ -14,9 +14,9 @@ export default function Lugares(){
                     <Grid item xs={12} sm={12}>
                         <Typography gutterBottom variant="h4" component="h2" align="center">Lugares de entrega</Typography>
                     </Grid>
-                   {/*  <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={4}>
                         <TarjetaImagen nombreLugar = "Chedraui Jacarandas" descripcion = "Hora: 14:40  a 14:55" nombreImagen = {imagenesLugar1}/>
-                    </Grid> */}
+                    </Grid>
                     <Grid item xs={12} sm={4}>
                         <TarjetaImagen descripcion = "Hora: 15:30  a 16:00" nombreLugar = "Cuernavaca Plazuela" nombreImagen = {imagenesLugar2}/>
                     </Grid>
